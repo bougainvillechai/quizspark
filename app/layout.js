@@ -1,5 +1,13 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import { Inter, Poppins } from '@next/font/google';
+import Navbar from "./Components/navbar";
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  weight: ['100', '200','300','400','500','600', '700'], 
+});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,10 +28,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+    <head>
+      <title>Quiz Spark</title>
+    </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+        className={poppins.variable}>
+          <header>
+            <Navbar />
+          </header>
+        <main>{children}</main>
       </body>
     </html>
   );

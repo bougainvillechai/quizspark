@@ -20,6 +20,34 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.poppins{
+  font-family: var(--font-poppins);
+}
+
+.poppins-regular{
+  font-weight: 400;
+}
+
+.poppins-light{
+  font-weight: 300;
+}
+
+.poppins-thin{
+  font-weight: 100;
+}
+
+.poppins-semibold{
+  font-weight: 600;
+}
+
+.poppins-bold{
+  font-weight: 700;
+}
+
+.poppins-xbold{
+  font-weight: 800;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
